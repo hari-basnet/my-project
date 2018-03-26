@@ -115,44 +115,45 @@ class App extends Component {
           <div className = "header"><h2>Nord Software</h2></div>
           <div className = "body-part">
 
-            <h2>List of participants</h2>
+            <h3>List of participants</h3>
             <div className ="form-part">
               <Form onSubmit={submission => this.setState({
                 data: [...this.state.data, submission]
               })}
               />
             </div>
-            <div className = "table-part"></div>
-            <Table
-              handleSort={this.handleSort}
-              handleRemove={this.handleRemove}
-              startEditing={this.startEditing}
-              editIdx={this.state.editIdx}
-              stopEditing={this.stopEditing}
-              handleSave={this.handleSave}
-              columnToSort={this.state.columnToSort}
-              sortDirection={this.state.sortDirection}
-              data={orderBy(
-                this.state.data,
-                this.state.columnToSort,
-                this.state.sortDirection
-              )}
-              header={[
-                {
-                  name: "Name",
-                  prop: "fullName",
-                },
-                {
-                  name: "E-mail address",
-                  prop: "email",
-                },
-                {
-                  name: "Phone Number",
-                  prop: "phoneNumber",
-                }
+            <div className = "table-part">
+              <Table
+                handleSort={this.handleSort}
+                handleRemove={this.handleRemove}
+                startEditing={this.startEditing}
+                editIdx={this.state.editIdx}
+                stopEditing={this.stopEditing}
+                handleSave={this.handleSave}
+                columnToSort={this.state.columnToSort}
+                sortDirection={this.state.sortDirection}
+                data={orderBy(
+                  this.state.data,
+                  this.state.columnToSort,
+                  this.state.sortDirection
+                )}
+                header={[
+                  {
+                    name: "Name",
+                    prop: "fullName",
+                  },
+                  {
+                    name: "E-mail address",
+                    prop: "email",
+                  },
+                  {
+                    name: "Phone Number",
+                    prop: "phoneNumber",
+                  }
 
-              ]}
-            />
+                ]}
+              />
+            </div>
           </div>
         </div>
       </MuiThemeProvider>

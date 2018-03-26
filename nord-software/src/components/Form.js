@@ -87,6 +87,7 @@ import '../App.css';
           onChange ={e => this.change(e)}
           floatingLabelFixed
           errorText = {this.state.fullNameError}
+          
 
         />
 
