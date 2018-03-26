@@ -1,4 +1,5 @@
 #Installation Guide
+---
 This is a simple contact managing app that registers the details of the participants and display it on the screen in a table.
 
 #Installation
@@ -14,10 +15,11 @@ Clone or download the repository to your computer from github and change the dir
 
 git clone (link from the github)
 ```
+---
 `cd my-project`
 ---
 
-Use `npm start`to start the application
+Use `npm start` to start the application
 ---
 
 After Running the command a new tab will automatically pop up with the app running.
